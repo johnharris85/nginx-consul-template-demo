@@ -1,0 +1,11 @@
+# TODO when support for net=host in stacks, or solution to run all without net=host
+version: "3.3"
+services:
+  app:
+    image: johnharris85/simple-hostname-reporter:2
+  nginx:
+    image: johnharris85/nginx-consul-template:1
+  consul:
+    image: consul:0.9.2
+  registrator:
+    image: gliderlabs/registrator:master
